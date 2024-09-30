@@ -5,6 +5,11 @@ import "./App.css";
 import Header from "./components/header";
 import ProductCard from "./components/product-card";
 import ProductBalloon from "./components/product-balloon";
+import TextImgBlock from "./components/text-img-block";
+import TextCarouselBlock from "./components/text-carousel-block";
+import loc from "./assets/localization";
+
+
 
 function App() {
   return (
@@ -13,6 +18,7 @@ function App() {
       <div class="page-home">
         <div class="featured">
           <div>
+            {loc.homeTitle}
             <ProductCard />
             <ProductBalloon />
           </div>
@@ -25,6 +31,22 @@ function App() {
             <ProductCard />
           </div>
         </div>
+        <TextImgBlock />
+        <div class="featured">
+          <div>
+            <ProductCard />
+            <ProductBalloon />
+          </div>
+          <div>
+            <ProductBalloon />
+            <ProductCard />
+          </div>
+          <div>
+            <ProductCard />
+            <ProductBalloon />
+          </div>
+        </div>
+        <TextCarouselBlock/>
       </div>
     </>
   );

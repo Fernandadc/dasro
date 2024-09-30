@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons";
+import loc from "../assets/localization";
 
 function Header() {
   return (
@@ -10,7 +11,7 @@ function Header() {
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
         <div>
-          <h1>Dasrô</h1>
+          <h1>{loc.homeTitle}</h1>
         </div>
         <span>
           <FontAwesomeIcon icon={faBars} />
@@ -19,16 +20,16 @@ function Header() {
 
       <ul class="container-menu">
         <li>
-          <a href="">PRODUTOS</a>
+          <a href="">{loc.headerProducts}</a>
         </li>
         <li>
-          <a href="">SOBRE NÓS</a>
+          <a href="">{loc.headerAbout}</a>
         </li>
         <li>
-          <a href="">FEEDBACK</a>
+          <a href="">{loc.headerFeedback}</a>
         </li>
         <li>
-          <a href="">ENCOMENDAS</a>
+          <a href="">{loc.headerOrder}</a>
         </li>
       </ul>
     </header>
