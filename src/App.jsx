@@ -8,6 +8,7 @@ import ProductBalloon from "./components/product-balloon";
 import TextImgBlock from "./components/text-img-block";
 import TextCarouselBlock from "./components/text-carousel-block";
 import loc from "./assets/localization";
+import db, {cakes,category,treats} from "./assets/database";
 
 
 
@@ -19,7 +20,7 @@ function App() {
         <div class="featured">
           <div>
             {loc.homeTitle}
-            <ProductCard />
+            <ProductCard product={db.cakes[cakes.anne]}/>
             <ProductBalloon />
           </div>
           <div>
