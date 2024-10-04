@@ -2,7 +2,7 @@ import React from "react";
 
 function TextCarouselBlock (){
     return (
-        <div class="text-carousel-block">
+        <div className="text-carousel-block">
             Carrossel texto
         </div>
     );

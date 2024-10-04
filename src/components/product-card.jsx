@@ -1,23 +1,63 @@
-import React from "react";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 
+function ProductCard(props) {
+  const [current, setCurrent] = useState(0);
 
-function ProductCard (props){
-    if (props?.product == null) return (<div></div>);
-    
-    return (
-        <div class="product-card">
-            {RenderProduct(props.product)}
-        </div>
-    );
+  // Null check for valid products.
+  if (props?.products == null) return <div></div>;
+
+  // Carousel logic.
+  return (
+    <div className="product-card">
+      <div
+        className="product-card-container"
+        style={{ left: `${-100 * current}%` }}
+      >
+        {props.products.map(RenderProduct)}
+      </div>
+      <button
+        className={
+          "progress-button progress-left " + (current == 0 ? "invisible" : "")
+        }
+        onClick={() => setCurrent(current - 1)}
+      >
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <button
+        className={
+          "progress-button progress-right " +
+          (current == props.products.length - 1 ? "invisible" : "")
+        }
+        onClick={() => setCurrent(current + 1)}
+      >
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+      <div className="progress-bar">
+        {props.products.map((product) => (
+          <FontAwesomeIcon
+            className={product == props.products[current] ? "selected" : ""}
+            icon={faCircle}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
-function RenderProduct (product){
-    return (
-        <div class="product-card-render">
-            <img src={product.img} alt="foto Anne" />
-            <span>{product.name}</span>
-        </div>
-    );
+// Deals with a single product card rendering.
+function RenderProduct(product) {
+  return (
+    <div className="product-card-render">
+      <img src={product.img} alt={`imagem torta ${product.name}`} />
+      <span>{product.name}</span>
+    </div>
+  );
 }
 
 export default ProductCard;

@@ -1,26 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Header from "./components/header";
-import ProductCard from "./components/product-card";
-import ProductBalloon from "./components/product-balloon";
-import TextImgBlock from "./components/text-img-block";
-import TextCarouselBlock from "./components/text-carousel-block";
+import db, { cakes } from "./assets/database";
 import loc from "./assets/localization";
-import db, {cakes,category,treats} from "./assets/database";
-
-
+import Header from "./components/header";
+import ProductBalloon from "./components/product-balloon";
+import ProductCard from "./components/product-card";
+import TextCarouselBlock from "./components/text-carousel-block";
+import TextImgBlock from "./components/text-img-block";
 
 function App() {
   return (
     <>
       <Header />
-      <div class="page-home">
-        <div class="featured">
+      <div className="page-home">
+        <div className="featured">
           <div>
             {loc.homeTitle}
-            <ProductCard product={db.cakes[cakes.anne]}/>
+            <ProductCard
+              products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}
+            />
             <ProductBalloon />
           </div>
           <div>
@@ -33,7 +30,7 @@ function App() {
           </div>
         </div>
         <TextImgBlock />
-        <div class="featured">
+        <div className="featured">
           <div>
             <ProductCard />
             <ProductBalloon />
@@ -47,7 +44,7 @@ function App() {
             <ProductBalloon />
           </div>
         </div>
-        <TextCarouselBlock/>
+        <TextCarouselBlock />
       </div>
     </>
   );

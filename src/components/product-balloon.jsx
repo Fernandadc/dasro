@@ -2,7 +2,7 @@ import React from "react";
 
 function ProductBalloon (){
     return (
-        <div class="product-balloon"></div>
+        <div className="product-balloon"></div>
     );
 }
 

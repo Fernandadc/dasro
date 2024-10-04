@@ -6,7 +6,7 @@ import loc from "../assets/localization";
 function Header() {
   return (
     <header>
-      <div class="container-header">
+      <div className="container-header">
         <span>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
@@ -18,7 +18,7 @@ function Header() {
         </span>
       </div>
 
-      <ul class="container-menu">
+      <ul className="container-menu">
         <li>
           <a href="">{loc.headerProducts}</a>
         </li>
