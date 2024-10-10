@@ -14,19 +14,18 @@ function App() {
       <div className="page-home">
         <div className="featured">
           <div>
-            {loc.homeTitle}
             <ProductCard
               products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}
             />
             <ProductBalloon />
           </div>
           <div>
-            <ProductCard />
+            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
             <ProductBalloon />
           </div>
           <div>
             <ProductBalloon />
-            <ProductCard />
+            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
           </div>
         </div>
         <TextImgBlock />

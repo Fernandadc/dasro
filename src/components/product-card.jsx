@@ -15,12 +15,6 @@ function ProductCard(props) {
   // Carousel logic.
   return (
     <div className="product-card">
-      <div
-        className="product-card-container"
-        style={{ left: `${-100 * current}%` }}
-      >
-        {props.products.map(RenderProduct)}
-      </div>
       <button
         className={
           "progress-button progress-left " + (current == 0 ? "invisible" : "")
@@ -45,6 +39,14 @@ function ProductCard(props) {
             icon={faCircle}
           />
         ))}
+      </div>
+      <div className="product-card-carousel">
+        <div
+          className="product-card-container"
+          style={{ left: `${-100 * current}%` }}
+        >
+          {props.products.map(RenderProduct)}
+        </div>
       </div>
     </div>
   );
