@@ -1,11 +1,11 @@
 import React from "react";
 
 const loc = {
-    commonDasro: "Dasrô",
-    headerProducts: "Produtos",
-    headerAbout: "Sobre Nós",
-    headerFeedback: "Feedback",
-    headerOrder: "Encomendas"
+    commonDasro: "DASRÔ",
+    headerProducts: "PRODUTOS",
+    headerAbout: "SOBRE NÓS",
+    headerFeedback: "FEEDBACK",
+    headerOrder: "ENCOMENDAS"
 }
 
 export default loc;

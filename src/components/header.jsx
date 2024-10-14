@@ -11,7 +11,7 @@ function Header() {
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
         <div>
-          <h1>{loc.homeTitle}</h1>
+          <h1 className="crimson-text-regular common" >{loc.commonDasro}</h1>
         </div>
         <span>
           <FontAwesomeIcon icon={faBars} />
@@ -19,8 +19,8 @@ function Header() {
       </div>
 
       <ul className="container-menu">
-        <li>
-          <a href="">{loc.headerProducts}</a>
+        <li className="crimson-text-regular menu">
+          <a href="" >{loc.headerProducts}</a>
         </li>
         <li>
           <a href="">{loc.headerAbout}</a>

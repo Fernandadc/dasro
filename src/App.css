@@ -1,12 +1,53 @@
+:root {
+  --background: #f2dcc9;
+  --cardBorder: #594645;
+  --menu: #bf6c5a;
+  --contrast: #bf522a;
+  --fontColor: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  margin: unset;
+}
 .container-header {
+  padding: 0 12px;
+  background-color: var(--menu);
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  .crimson-text-regular {
+    &.common {
+      font-size: larger;
+      color: var(--fontColor);
+    }
+  }
+}
+
+.crimson-text-regular {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container-menu {
+  background-color: var(--menu);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  list-style-type: none;
+  .crimson-text-regular {
+    &.menu {
+      font-size: large;
+      
+    }
+  }
+}
+
+a:-webkit-any-link {
+  color: var(--fontColor);
+  cursor: pointer;
+  text-decoration: unset;
 }
 
 .product-card {
@@ -39,9 +80,9 @@
     position: absolute;
     bottom: 0;
     > svg {
-      color: gray;
+      color: var(--cardBorder);
       &.selected {
-        color: orange;
+        color: var(--contrast);
       }
     }
   }
@@ -60,7 +101,7 @@
       top: 0;
       transition: left 0.25s;
       .product-card-render {
-        background-color: blueviolet;
+        background-color: var(--cardBorder);
         width: 100%;
         height: 100%;
         flex: 0 0 100%;
@@ -71,8 +112,8 @@
 }
 
 .product-balloon {
-  background-color: rgb(43, 95, 226);
-  width: 100%;
+  margin: 20px;
+  background-color: white;
   height: 100px;
 }
 
