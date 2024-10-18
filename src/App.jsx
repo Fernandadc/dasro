@@ -1,6 +1,7 @@
 import "./App.css";
 import db, { cakes } from "./assets/database";
 import loc from "./assets/localization";
+import Footer from "./components/footer";
 import Header from "./components/header";
 import ProductBalloon from "./components/product-balloon";
 import ProductCard from "./components/product-card";
@@ -45,6 +46,7 @@ function App() {
         </div>
         <TextCarouselBlock />
       </div>
+      <Footer />
     </>
   );
 }
