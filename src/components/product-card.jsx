@@ -56,7 +56,7 @@ function ProductCard(props) {
 function RenderProduct(product) {
   return (
     <div className="product-card-render">
-      <img src={product.img} alt={`imagem torta ${product.name}`} />
+      <img src={product.image} alt={`imagem torta ${product.name}`} />
       <span>{product.name}</span>
     </div>
   );
