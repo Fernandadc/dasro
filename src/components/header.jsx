@@ -19,7 +19,7 @@ function Header() {
       </div>
 
       <ul className="container-menu">
-        <li className="crimson-text-regular menu">
+        <li className="montserrat-menu">
           <a href="" >{loc.headerProducts}</a>
         </li>
         <li>

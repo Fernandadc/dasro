@@ -25,7 +25,7 @@ function App() {
             <ProductBalloon />
           </div>
           <div>
-            <ProductBalloon className="reverse"/>
+            <ProductBalloon inverted={true}/>
             <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
           </div>
         </div>
