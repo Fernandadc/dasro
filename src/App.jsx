@@ -32,15 +32,15 @@ function App() {
         <TextImgBlock />
         <div className="featured">
           <div>
-            <ProductCard />
+            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
             <ProductBalloon />
           </div>
           <div>
-            <ProductBalloon />
-            <ProductCard />
+            <ProductBalloon inverted={true}/>
+            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
           </div>
           <div>
-            <ProductCard />
+            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
             <ProductBalloon />
           </div>
         </div>

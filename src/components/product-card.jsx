@@ -58,8 +58,11 @@ function RenderProduct(product) {
     <div className="product-card-render">
       <div className="card-image">
         <img src={product.image} alt={`imagem torta ${product.name}`} />
-        </div>
-      <div className="card-description">{product.name}</div>
+      </div>
+      <div className="card-description">
+        <span>Bolos</span>
+        <h4>{product.name}</h4>
+      </div>
     </div>
   );
 }

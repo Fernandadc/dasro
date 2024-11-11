@@ -118,7 +118,6 @@ a:-webkit-any-link {
       .product-card-render {
         flex: 0 0 100%;
         .card-image {
-          
           overflow: hidden;
           > img {
             width: 100%;
@@ -127,6 +126,16 @@ a:-webkit-any-link {
             &:hover {
               transform: scale(1.05);
             }
+          }
+        }
+        .card-description{
+          padding: 15px;
+          border-style: solid;
+          border-top: none;
+          border-color: var(--cardBorder);
+          > h4{
+            margin: 0px 0px 20px;
+            font-size: 1.2rem;
           }
         }
       }
@@ -172,7 +181,7 @@ a:-webkit-any-link {
 .text-img-block {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 20px 0px;
   animation: 2s animation;
   > img {
     height: 300px;
