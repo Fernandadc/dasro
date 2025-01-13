@@ -2,26 +2,24 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons";
 import loc from "../assets/localization";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
-
       <ul className="container-menu">
         <li>
-          <a href="">{loc.commonDasro}</a>
+          <Link to="/">{loc.commonDasro}</Link>
         </li>
-        <li className="montserrat-menu">
-          <a href="" >{loc.headerProducts}</a>
-        </li>
-        <li>
-          <a href="">{loc.headerAbout}</a>
+        <li >
+          <Link to="/products">{loc.headerProducts}</Link>
         </li>
         <li>
-          <a href="">{loc.headerFeedback}</a>
+          <Link to="/aboutus">{loc.headerAbout}</Link>
         </li>
+
         <li>
-          <a href="">{loc.headerOrder}</a>
+          <Link to="/order">{loc.headerOrder}</Link>
         </li>
       </ul>
     </header>

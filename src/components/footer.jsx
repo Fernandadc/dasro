@@ -9,7 +9,7 @@ function Footer() {
     <div className="container-footer">
       <span>© 2024 Dasro, Inc</span>
       <a href="">
-        <img src="src/assets/images/dasro-icon.png" alt="" />
+        <img src="/src/assets/images/dasro-icon.png" alt="" />
       </a>
       <div className="social-media">
       <a href="">

@@ -45,7 +45,7 @@ body {
   justify-content: space-evenly;
   list-style-type: none;
   padding: 16px;
-  margin: 0 0 15px;
+  margin: 0;
   .crimson-text-regular {
     &.menu {
       font-size: large;
@@ -96,6 +96,9 @@ a:-webkit-any-link {
     width: 100%;
     position: absolute;
     bottom: 0;
+    &.hidden{
+      opacity: 0;
+    }
     > svg {
       color: var(--cardBorder);
       width: 8px;
@@ -123,19 +126,50 @@ a:-webkit-any-link {
             width: 100%;
             transition: transform 0.6s ease-in-out !important;
             aspect-ratio: 1;
+            object-fit: cover;
+            overflow: hidden;
             &:hover {
               transform: scale(1.05);
             }
           }
         }
-        .card-description{
+        .card-description {
+          position: relative;
           padding: 15px;
           border-style: solid;
           border-top: none;
           border-color: var(--cardBorder);
-          > h4{
+          > h4 {
             margin: 0px 0px 20px;
             font-size: 1.2rem;
+          }
+          .description-hover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background);
+            display: none;
+            &.active{
+              display: block;
+            }
+            > p {
+              margin-left: 15px;
+              
+            }
+          }
+          > svg {
+            color: var(--contrast);
+            position: absolute;
+            height: 1.8rem;
+            width: 1.8rem;
+            top: -1.3rem;
+            right: 0.7rem;
+            display: none;
+            &.active{
+              display: block;
+            }
           }
         }
       }
@@ -212,6 +246,7 @@ a:-webkit-any-link {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 0;
+  padding-bottom: 5px;
   background-color: var(--menu);
   color: var(--fontColor);
   .social-media {
@@ -228,4 +263,54 @@ a:-webkit-any-link {
       width: 100px;
     }
   }
+}
+
+.aboutus {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 100px;
+  .text-block {
+    padding: 0 50px 0 70px;
+  }
+  .img-bio {
+    border-radius: 50%;
+    width: 300px;
+    transition: transform 0.3s ease-in-out !important;
+    aspect-ratio: 1;
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.category-title {
+  margin: 20px 0 50px 50px;
+  font-size: x-large;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.sub-list {
+  color: var(--fontColor);
+  background-color: var(--menu);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+  padding: 16px;
+  margin: 0 0 15px;
+  border-top: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #ffffff 50%,
+      transparent 100%
+    )
+    100% 1;
 }

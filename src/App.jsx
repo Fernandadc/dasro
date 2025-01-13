@@ -1,4 +1,6 @@
+import React from "react";
 import "./App.css";
+import { Router, Route, Routes, useNavigate } from "react-router-dom";
 import db, { cakes } from "./assets/database";
 import loc from "./assets/localization";
 import Footer from "./components/footer";
@@ -7,45 +9,28 @@ import ProductBalloon from "./components/product-balloon";
 import ProductCard from "./components/product-card";
 import TextCarouselBlock from "./components/text-carousel-block";
 import TextImgBlock from "./components/text-img-block";
+import Homepage from "./pages/homepage";
+import AboutUs from "./pages/about-us";
 
-function App() {
+import Order from "./pages/order";
+import Products from "./pages/products-page";
+/* alternar entre bolos e doces no product card 
+    tirar a bolinha debaixo dos produtos
+    colocar o= descricao e icone info nos produtos*/
+function App(props) {
   return (
     <>
       <Header />
-      <div className="page-home">
-        <div className="featured">
-          <div>
-            <ProductCard
-              products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}
-            />
-            <ProductBalloon />
-          </div>
-          <div>
-            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-            <ProductBalloon />
-          </div>
-          <div>
-            <ProductBalloon inverted={true}/>
-            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-          </div>
-        </div>
-        <TextImgBlock />
-        <div className="featured">
-          <div>
-            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-            <ProductBalloon />
-          </div>
-          <div>
-            <ProductBalloon inverted={true}/>
-            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-          </div>
-          <div>
-            <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-            <ProductBalloon />
-          </div>
-        </div>
-        <TextCarouselBlock />
-      </div>
+
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/products/bolos" element={<Products product="bolos"/>}></Route>
+        <Route path="/products/doces" element={<Products product="doces"/>}></Route>
+        <Route path="/order" element={<Order />}></Route>
+      </Routes>
+
       <Footer />
     </>
   );

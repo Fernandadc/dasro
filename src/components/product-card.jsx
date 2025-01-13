@@ -2,9 +2,11 @@ import {
   faChevronLeft,
   faChevronRight,
   faCircle,
+  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useRef } from "react";
 
 function ProductCard(props) {
   const [current, setCurrent] = useState(0);
@@ -32,7 +34,8 @@ function ProductCard(props) {
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
-      <div className="progress-bar">
+      <div className={"progress-bar " +
+          (props.products.length <= 1 ? "hidden" : "")}>
         {props.products.map((product) => (
           <FontAwesomeIcon
             className={product == props.products[current] ? "selected" : ""}
@@ -45,7 +48,7 @@ function ProductCard(props) {
           className="product-card-container"
           style={{ left: `${-100 * current}%` }}
         >
-          {props.products.map(RenderProduct)}
+          {props.products.map((p) => RenderProduct(p, props.title))}
         </div>
       </div>
     </div>
@@ -53,14 +56,30 @@ function ProductCard(props) {
 }
 
 // Deals with a single product card rendering.
-function RenderProduct(product) {
+function RenderProduct(product, title) {
+  const descriptionHover = useRef(null);
   return (
     <div className="product-card-render">
       <div className="card-image">
-        <img src={product.image} alt={`imagem torta ${product.name}`} />
+        <img src={product.image} alt={`imagem ${product.name}`} />
       </div>
+
       <div className="card-description">
-        <span>Bolos</span>
+        <div ref={descriptionHover} className="description-hover">
+          <p>
+            Descrição <br />
+            {product.description}
+          </p>
+        </div>
+
+        <FontAwesomeIcon
+          icon={faCircleInfo}
+          
+          className={(product.description?.length > 0?"active":"")}
+          onMouseEnter={() => descriptionHover.current.classList.add("active")}
+          onMouseLeave={() => descriptionHover.current.classList.remove("active")}
+        />
+        <span>{title}</span>
         <h4>{product.name}</h4>
       </div>
     </div>
