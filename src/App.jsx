@@ -12,7 +12,7 @@ import TextImgBlock from "./components/text-img-block";
 import Homepage from "./pages/homepage";
 import AboutUs from "./pages/about-us";
 
-import Order from "./pages/order";
+import Contact from "./pages/contact";
 import Products from "./pages/products-page";
 /* alternar entre bolos e doces no product card 
     tirar a bolinha debaixo dos produtos
@@ -28,7 +28,7 @@ function App(props) {
         <Route path="/products" element={<Products />}></Route>
         <Route path="/products/bolos" element={<Products product="bolos"/>}></Route>
         <Route path="/products/doces" element={<Products product="doces"/>}></Route>
-        <Route path="/order" element={<Order />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
 
       <Footer />

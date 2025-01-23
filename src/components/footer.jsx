@@ -7,7 +7,7 @@ import { faTwitter, faFontAwesome, faInstagram, faFacebook, faWhatsapp } from '@
 function Footer() {
   return (
     <div className="container-footer">
-      <span>© 2024 Dasro, Inc</span>
+      <span className="poppins-extralight">© 2024 Dasro, Inc</span>
       <a href="">
         <img src="/src/assets/images/dasro-icon.png" alt="" />
       </a>

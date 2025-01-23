@@ -8,40 +8,40 @@ import ProductCard from "../components/product-card";
 import TextCarouselBlock from "../components/text-carousel-block";
 import TextImgBlock from "../components/text-img-block";
 
-function Homepage() {
+function Homepage(props) {
     return (
       <>
         
         <div className="page-home">
           <div className="featured">
             <div>
-              <ProductCard
+              <ProductCard title={"Bolos"}
                 products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}
               />
               <ProductBalloon />
             </div>
             <div>
-              <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
+              <ProductCard title={"Bolos"} products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
               <ProductBalloon />
             </div>
             <div>
               <ProductBalloon inverted={true}/>
-              <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
+              <ProductCard title={"Bolos"} products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
             </div>
           </div>
           <TextImgBlock />
           <div className="featured">
             <div>
-              <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-              <ProductBalloon />
+              <ProductCard title={"Bolos"} products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
+              
             </div>
             <div>
-              <ProductBalloon inverted={true}/>
-              <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
+              
+              <ProductCard title={"Bolos"} products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
             </div>
             <div>
-              <ProductCard products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
-              <ProductBalloon />
+              <ProductCard title={"Bolos"} products={[db.cakes[cakes.anne], db.cakes[cakes.diamanteNegro], db.cakes[cakes.macron]]}/>
+              
             </div>
           </div>
           <TextCarouselBlock />

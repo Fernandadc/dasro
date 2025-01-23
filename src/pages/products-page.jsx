@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Products(props) {
   return (
     <div className="page-products">
-      <ul className="sub-list">
+      <ul className="sub-list poppins-extralight">
         <li>
           <Link to="/products/bolos">BOLOS</Link>
         </li>
@@ -18,7 +18,7 @@ function Products(props) {
       </ul>
       {props.product == null || props.product == "bolos" ? (
         <div className="product-category">
-          <span className="category-title">Tradicionais</span>
+          <span className="category-title poppins-extralight">Tradicionais</span>
           <div className="product-list">
             {db.cakes
               .filter((cake) => cake.category == category.tradicional)
@@ -26,7 +26,7 @@ function Products(props) {
                 <ProductCard title={"Bolos"} products={[cake]} />
               ))}
           </div>
-          <span className="category-title">Especiais</span>
+          <span className="category-title poppins-extralight">Especiais</span>
           <div className="product-list">
             {db.cakes
               .filter((cake) => cake.category == category.special)
@@ -38,7 +38,7 @@ function Products(props) {
       ) : null}
       {props.product == "doces" ? (
         <div className="product-category">
-          <span className="category-title">Tradicionais</span>
+          <span className="category-title poppins-extralight">Tradicionais</span>
           <div className="product-list">
             {db.treats
               .filter((treat) => treat.category == category.tradicional)
@@ -46,7 +46,7 @@ function Products(props) {
                 <ProductCard title={"Doces"} products={[treat]} />
               ))}
           </div>
-          <span className="category-title">Gourmet</span>
+          <span className="category-title poppins-extralight">Gourmet</span>
           <div className="product-list">
             {db.treats
               .filter((treat) => treat.category == category.gourmet)
@@ -54,7 +54,7 @@ function Products(props) {
                 <ProductCard title={"Doces"} products={[treat]} />
               ))}
           </div>
-          <span className="category-title">Premium</span>
+          <span className="category-title poppins-extralight">Premium</span>
           <div className="product-list">
             {db.treats
               .filter((treat) => treat.category == category.premium)

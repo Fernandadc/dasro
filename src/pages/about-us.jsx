@@ -7,8 +7,8 @@ function AboutUs() {
   return (
     <>
       <div className="aboutus">
-        <div className="text-block">
-        <h1> A DasRo é o encontro perfeito entre tradição e sofisticação </h1>
+        <div className="text-block poppins-extralight">
+        <h2> A DASRO É O ENCONTRO PERFEITO ENTRE TRADIÇÃO E SOFISTICAÇÃO </h2>
         <span>
           Há mais de 20 anos, mãe e filha dedicam-se a criar doces artesanais e
           únicos, como nossas tortas elegantes e brigadeiros gourmet. Cada

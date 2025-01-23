@@ -1,9 +1,12 @@
 :root {
-  --background: #f2dcc9;
-  --cardBorder: #594645;
-  --menu: #bf6c5a;
-  --contrast: #bf522a;
-  --fontColor: #ffffff;
+  --background:  #EDEAE5;
+  --cardBorder: #A67B5B;
+  --menu: #D9B99B;
+  --contrast: #584130;
+  --button: #A67B5B;
+  --fontColor: #FFFFFF;
+  --title: #5C4A3E;
+  --subtitle:  #A67B5B;
 }
 
 body {
@@ -25,16 +28,15 @@ body {
   }
 }
 
-.crimson-text-regular {
-  font-family: "Crimson Text", serif;
-  font-weight: 500;
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-.montserrat-menu {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -96,7 +98,7 @@ a:-webkit-any-link {
     width: 100%;
     position: absolute;
     bottom: 0;
-    &.hidden{
+    &.hidden {
       opacity: 0;
     }
     > svg {
@@ -139,11 +141,12 @@ a:-webkit-any-link {
           border-style: solid;
           border-top: none;
           border-color: var(--cardBorder);
+          color: var(--title);
           > h4 {
             margin: 0px 0px 20px;
             font-size: 1.2rem;
           }
-          .description-hover{
+          .description-hover {
             position: absolute;
             top: 0;
             left: 0;
@@ -151,23 +154,25 @@ a:-webkit-any-link {
             height: 100%;
             background-color: var(--background);
             display: none;
-            &.active{
+            &.active {
               display: block;
             }
             > p {
               margin-left: 15px;
-              
+              color: var(--title);
             }
           }
           > svg {
-            color: var(--contrast);
+            color: var(--button);
             position: absolute;
             height: 1.8rem;
             width: 1.8rem;
             top: -1.3rem;
             right: 0.7rem;
             display: none;
-            &.active{
+            background-color: var(--background);
+            border-radius: 50%;
+            &.active {
               display: block;
             }
           }
@@ -180,7 +185,7 @@ a:-webkit-any-link {
 .product-balloon {
   position: relative;
   margin: 50px;
-  background-color: white;
+  background-color: var(--menu);
   height: 100px;
   &:not(.inverted) {
     &::before {
@@ -189,7 +194,7 @@ a:-webkit-any-link {
       height: 0;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
-      border-bottom: 30px solid white;
+      border-bottom: 30px solid var(--menu);
       content: "";
       top: -30px;
       position: absolute;
@@ -203,7 +208,7 @@ a:-webkit-any-link {
       height: 0;
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
-      border-top: 30px solid white;
+      border-top: 30px solid var(--menu);
       content: "";
       bottom: -30px;
       position: absolute;
@@ -236,6 +241,8 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
     > * {
       flex: 1;
     }
@@ -285,14 +292,16 @@ a:-webkit-any-link {
 }
 
 .category-title {
-  margin: 20px 0 50px 50px;
   font-size: x-large;
+  color: var(--title);
 }
 
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .sub-list {
@@ -313,4 +322,69 @@ a:-webkit-any-link {
       transparent 100%
     )
     100% 1;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    > a {
+      color: var(--cardBorderxx);
+      margin-right: auto;
+    }
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+    margin-top: 7rem;
+    > * {
+      margin: 10px;
+    }
+    input,
+    textarea {
+      background-color: var(--background);
+      width: 90%;
+      border: 0;
+      border-bottom: 1px solid #aaa;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--cardBorder);
+      letter-spacing: 0.11em;
+      
+
+      &::placeholder {
+        color: var(--menu);
+        font-size: 15px;
+      }
+
+      &:focus {
+        outline: 0;
+        border-bottom: 1px solid var(--contrast);
+        transition: 0.6s all ease;
+      }
+    }
+    > button {
+      border-style: none;
+      border: 0;
+      outline: 0;
+      color: white;
+      font-size: 15px;
+      font-weight: 300;
+      position: relative;
+      z-index: 3;
+      background: var(--contrast);
+      cursor: pointer;
+    }
+  }
 }

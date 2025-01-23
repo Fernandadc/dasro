@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header>
-      <ul className="container-menu">
+      <ul className="container-menu poppins-regular">
         <li>
           <Link to="/">{loc.commonDasro}</Link>
         </li>
@@ -19,7 +19,7 @@ function Header() {
         </li>
 
         <li>
-          <Link to="/order">{loc.headerOrder}</Link>
+          <Link to="/contact">{loc.headerContact}</Link>
         </li>
       </ul>
     </header>

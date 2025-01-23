@@ -5,7 +5,7 @@ const loc = {
     headerProducts: "PRODUTOS",
     headerAbout: "SOBRE NÓS",
     headerFeedback: "FEEDBACK",
-    headerOrder: "ENCOMENDAS"
+    headerContact: "CONTATO"
 }
 
 export default loc;
