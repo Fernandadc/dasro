@@ -66,8 +66,8 @@ function RenderProduct(product, title) {
 
       <div className="card-description">
         <div ref={descriptionHover} className="description-hover">
-          <p>
-            Descrição <br />
+          <span className="poppins-regular">Descrição</span>
+          <p className="poppins-thin">
             {product.description}
           </p>
         </div>
@@ -79,8 +79,8 @@ function RenderProduct(product, title) {
           onMouseEnter={() => descriptionHover.current.classList.add("active")}
           onMouseLeave={() => descriptionHover.current.classList.remove("active")}
         />
-        <span>{title}</span>
-        <h4>{product.name}</h4>
+        <span className="poppins-extralight">{title}</span>
+        <h4 className="poppins-regular">{product.name}</h4>
       </div>
     </div>
   );

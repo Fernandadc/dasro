@@ -28,6 +28,13 @@ body {
   }
 }
 
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: small;
+}
+
 .poppins-regular {
   font-family: "Poppins", serif;
   font-weight: 400;
@@ -38,6 +45,13 @@ body {
   font-family: "Poppins", serif;
   font-weight: 200;
   font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
 }
 
 .container-menu {
@@ -155,11 +169,15 @@ a:-webkit-any-link {
             background-color: var(--background);
             display: none;
             &.active {
-              display: block;
+              display: flex;
+              flex-direction: column;
             }
             > p {
-              margin-left: 15px;
+              margin: 0 10px 0 10px;
               color: var(--title);
+            }
+            > span {
+              margin: 10px 10px 0 10px;
             }
           }
           > svg {
@@ -222,6 +240,8 @@ a:-webkit-any-link {
   justify-content: space-between;
   margin: 20px 0px;
   animation: 2s animation;
+  align-items: center;
+  color: var(--title);
   > img {
     height: 300px;
   }
@@ -294,6 +314,9 @@ a:-webkit-any-link {
 .category-title {
   font-size: x-large;
   color: var(--title);
+  display: flex;
+  justify-content: center;
+  
 }
 
 .product-list {
@@ -304,6 +327,8 @@ a:-webkit-any-link {
   margin: auto;
 }
 
+
+
 .sub-list {
   color: var(--fontColor);
   background-color: var(--menu);
@@ -313,7 +338,7 @@ a:-webkit-any-link {
   list-style-type: none;
   gap: 20px;
   padding: 16px;
-  margin: 0 0 15px;
+  margin: 0 0 30px;
   border-top: 1px solid;
   border-image: linear-gradient(
       to right,

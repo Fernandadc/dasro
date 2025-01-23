@@ -7,7 +7,6 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import ProductBalloon from "./components/product-balloon";
 import ProductCard from "./components/product-card";
-import TextCarouselBlock from "./components/text-carousel-block";
 import TextImgBlock from "./components/text-img-block";
 import Homepage from "./pages/homepage";
 import AboutUs from "./pages/about-us";
